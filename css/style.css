@@ -37,14 +37,33 @@ header.scrolled {
   background-color: var(--brand-green);
 }
 
-header.scrolled nav li,
+header.scrolled nav li a,
 header.scrolled .title {
   color: var(--white);
+}
+
+header.scrolled nav li:hover {
+  border-bottom-color: var(--white);
+}
+
+header.scrolled button {
+  color: var(--white);
+  background-color: var(--brand-green);
+  border-color: var(--white);
+}
+
+header.scrolled button:hover {
+  background-color: var(--white);
+  color: var(--brand-green);
 }
 
 header .title {
   width: 132px;
   height: 17px;
+}
+
+header .title:hover {
+  cursor: pointer;
 }
 
 nav ul {
@@ -64,7 +83,7 @@ nav li {
 nav li:hover {
   cursor: pointer;
   font-weight: 700;
-  border-bottom: 3px solid var(--brand-green);
+  border-bottom: 2px solid var(--brand-green);
 }
 
 nav li a {
@@ -88,6 +107,12 @@ nav li a {
   border: 1px solid var(--brand-green);
   color: var(--brand-green);
   background-color: var(--brand-green-ligth);
+}
+
+.header-btn button:hover {
+  cursor: pointer;
+  background-color: var(--brand-green);
+  color: var(--white);
 }
 
 main {
