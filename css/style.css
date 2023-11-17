@@ -227,3 +227,75 @@ nav li a {
   height: 80px;
   background-color: var(--brand-green);
 }
+
+/* service section */
+.service {
+  padding-top: 263px;
+  padding-bottom: 160px;
+  width: 80%;
+  height: 1082px;
+  margin: auto;
+  background-color: var(--brand-green-ligth-02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.service .segment {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  line-height: 1px;
+  color: var(--brand-green);
+}
+
+.service .title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  width: 497px;
+  height: 104px;
+}
+
+.service .subjects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.service .subjects > div {
+  width: 30%;
+  max-height: 207px;
+  border: 1px solid var(--brand-green-ligth);
+  padding: 20px;
+  background-color: #fff;
+}
+
+.subjects-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subjects-image {
+  width: 24px;
+  height: 24px;
+  background-color: var(--brand-green-ligth);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subjects-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gray-headline);
+}
+
+.subjects-description {
+  line-height: 24px;
+  color: var(--gray-paragraph);
+}
