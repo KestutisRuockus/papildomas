@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  --brand-green: #00856f;
+  --brand-green-ligth: #dce9e2;
+  --brand-green-ligth-02: #f7f9f9;
+  --brand-beige: #fffaf1;
+  --brand-green-hover: #00453a;
+  --gray-headline: #212529;
+  --gray-paragraph: #495057;
+  --white: #ededed;
+
+  background-color: var(--brand-green-ligth);
+  max-width: 1366px;
+  margin: auto;
+}
+
+header {
+  color: var(--brand-green);
+  height: 72px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1366px;
+  position: sticky;
+  top: 0;
+  transition: background-color 0.7s ease-in-out;
+}
+
+header.scrolled {
+  background-color: var(--brand-green);
+}
+
+header .title {
+  width: 132px;
+  height: 17px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+}
+
+nav li {
+  list-style: none;
+  font-weight: 400;
+  line-height: 72px;
+  transition: color 0.7s ease-in-out;
+}
+
+nav li:hover {
+  cursor: pointer;
+  font-weight: 700;
+  border-bottom: 3px solid var(--brand-green);
+}
+
+nav li a {
+  color: var(--brand-green);
+  text-decoration: none;
+}
+
+header.scrolled nav li,
+header.scrolled .title {
+  color: var(--white);
+}
+
+.header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-btn button {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  border-radius: 40px;
+  border: 1px solid var(--brand-green);
+  color: var(--brand-green);
+  background-color: var(--brand-green-ligth);
+}
+
+main {
+  margin-top: 72px;
+  height: 1000px;
+}
