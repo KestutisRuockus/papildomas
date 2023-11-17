@@ -37,6 +37,11 @@ header.scrolled {
   background-color: var(--brand-green);
 }
 
+header.scrolled nav li,
+header.scrolled .title {
+  color: var(--white);
+}
+
 header .title {
   width: 132px;
   height: 17px;
@@ -65,11 +70,6 @@ nav li:hover {
 nav li a {
   color: var(--brand-green);
   text-decoration: none;
-}
-
-header.scrolled nav li,
-header.scrolled .title {
-  color: var(--white);
 }
 
 .header-btn {
