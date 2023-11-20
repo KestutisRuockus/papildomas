@@ -421,3 +421,44 @@ nav li a {
   text-transform: uppercase;
   line-height: 18px;
 }
+
+/* footer */
+
+footer {
+  height: 268px;
+  width: 80%;
+  margin: auto;
+  background-color: var(--brand-green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  color: var(--brand-beige);
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.footer-media {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10%;
+}
+
+.footer-title,
+.footer-title strong {
+  font-size: 48px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.footer-paragraph {
+  font-size: 14px;
+  line-height: 18px;
+}
