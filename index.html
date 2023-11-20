@@ -17,18 +17,47 @@
       <div class="title">Doctor<strong>Care</strong></div>
       <nav class="nav">
         <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Depoimentos</a></li>
+          <li><a href="#start">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#service">Serviços</a></li>
+          <li><a href="#contacts">Depoimentos</a></li>
         </ul>
       </nav>
       <div class="header-btn">
         <button>Agendar consulta</button>
       </div>
+      <!-- open navbar container on mobile/small screen  -->
+      <div id="menu" onclick="showMenu()" class="menu">
+        <img src="/icons/menu.svg" alt="menu" />
+      </div>
+      <!-- close navabr container -->
+      <div id="close" onclick="closeNavbar()" class="close">
+        <img src="/icons/close.svg" alt="close" />
+      </div>
     </header>
+    <!-- mobile menu container -->
+    <div id="hamburger" class="mobile-menu">
+      <div class="mobile-nav">
+        <nav>
+          <ul>
+            <li><a href="#start">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#service">Serviços</a></li>
+            <li><a href="#contacts">Depoimentos</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-menu-btn">
+        <button>Agende sua consulta</button>
+      </div>
+      <div class="mobile-media">
+        <div><img src="/icons/instagram.svg" alt="instagram" /></div>
+        <div><img src="/icons/facebook.svg" alt="facebook" /></div>
+        <div><img src="/icons/youtube.svg" alt="youtube" /></div>
+      </div>
+    </div>
     <!-- hero section -->
-    <section class="hero">
+    <section id="start" class="hero">
       <div class="hero-text">
         <div class="welcome">BOAS-VINDAS A DOCTORCARE 👋</div>
         <div class="title">Assistência médica simplificada para todos</div>
@@ -63,7 +92,7 @@
       </div>
     </section>
     <!-- service section -->
-    <section class="service">
+    <section id="service" onclick="fixedNavbar()" class="service">
       <div class="segment">SERVIÇOS</div>
       <div class="title">Como podemos ajudá-lo a se sentir melhor?</div>
       <div class="subjects">
@@ -130,35 +159,36 @@
       </div>
     </section>
     <!-- about us section -->
-    <section class="about">
+    <section id="about" class="about">
       <div class="doctor"><img src="/img/doctor.svg" alt="doctor" /></div>
       <div class="about-text">
         <div class="about-segment">SOBRE NÓS</div>
         <div class="about-title">Entenda quem somos e por que existimos</div>
         <div class="about-description">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim. Amet minim mollit non
-            deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-            consequat duis enim. Amet minim mollit non deserunt ullamco est sit
-            aliqua dolor do amet sint. Velit officia consequat duis enim. Amet
-            minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-            Velit officia consequat duis enim. Amet minim mollit non deserunt
-            ullamco est sit aliqua dolor do amet sint.
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim. Amet minim mollit non
+          deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+          consequat duis enim. Amet minim mollit non deserunt ullamco est sit
+          aliqua dolor do amet sint. Velit officia consequat duis enim. Amet
+          minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+          Velit officia consequat duis enim. Amet minim mollit non deserunt
+          ullamco est sit aliqua dolor do amet sint.
+        </div>
       </div>
     </section>
     <!-- contact section -->
-    <section class="contact">
+    <section id="contacts" class="contact">
       <div class="contact-text">
         <div class="contact-title">Entre em contato com a gente!</div>
         <div class="contact-navigation">
           <div class="contact-location">
             <div>
-              <img src="/icons/map-pin.svg" alt="">
+              <img src="/icons/map-pin.svg" alt="" />
             </div>
             <div>R. Amauri Souza, 346</div>
           </div>
           <div class="contact-mail">
-            <div><img src="/icons/mail.svg" alt=""></div>
+            <div><img src="/icons/mail.svg" alt="" /></div>
             <div>contato@doctorcare.com</div>
           </div>
         </div>
@@ -167,8 +197,8 @@
           <div>Agende sua consulta</div>
         </div>
       </div>
-      <div  class="contact-image">
-        <img src="/img/picture2.svg" alt="picture2">
+      <div class="contact-image">
+        <img src="/img/picture2.svg" alt="picture2" />
       </div>
     </section>
     <!-- footer -->
@@ -179,20 +209,56 @@
         <div class="footer-paragraph">Todos os direitos reservados.</div>
       </div>
       <div class="footer-media">
-        <div><img src="/icons/instagram.svg" alt="instagram"></div>
-        <div><img src="/icons/facebook.svg" alt="facebook"></div>
-        <div><img src="/icons/youtube.svg" alt="youtube"></div>
+        <div><img src="/icons/instagram.svg" alt="instagram" /></div>
+        <div><img src="/icons/facebook.svg" alt="facebook" /></div>
+        <div><img src="/icons/youtube.svg" alt="youtube" /></div>
       </div>
     </footer>
   </body>
   <script>
-    document.addEventListener("scroll", () => {
+    document.addEventListener("scroll", fixedNavbar);
+
+    // set fixed navbar on top of the page
+    function fixedNavbar() {
       const header = document.querySelector("header");
       if (window.scrollY > 0) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
       }
-    });
+    }
+
+    // open navbar container in mobile screen size
+    function showMenu() {
+      document.getElementById("hamburger").style.display = "flex";
+      document.getElementById("start").style.display = "none";
+      document.getElementById("service").style.display = "none";
+      document.getElementById("about").style.display = "none";
+      document.getElementById("contacts").style.display = "none";
+      document.querySelector("footer").style.display = "none";
+
+      document.getElementById("menu").style.display = "none";
+      document.getElementById("close").style.display = "flex";
+      document.querySelector("header").style.backgroundColor =
+        "var(--brand-green)";
+      document.querySelector("header").style.color = "var(--white)";
+    }
+
+    // close mobile navbar and get back other sections
+
+    function closeNavbar() {
+      document.getElementById("start").style.display = "flex";
+      document.getElementById("service").style.display = "flex";
+      document.getElementById("about").style.display = "flex";
+      document.getElementById("contacts").style.display = "flex";
+      document.querySelector("footer").style.display = "flex";
+
+      document.getElementById("hamburger").style.display = "none";
+      document.getElementById("menu").style.display = "flex";
+      document.getElementById("close").style.display = "none";
+      document.querySelector("header").style.backgroundColor =
+        "var(--brand-green-ligth)";
+      document.querySelector("header").style.color = "var(--brand-green)";
+    }
   </script>
 </html>
