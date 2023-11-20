@@ -171,7 +171,7 @@ nav li a {
   color: var(--gray-paragraph);
 }
 
-.schedule-btn {
+.hero .schedule-btn {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -184,7 +184,8 @@ nav li a {
   font-weight: 700;
 }
 
-.schedule-btn:hover {
+.schedule-btn:hover,
+.contact .contact-btn:hover {
   background-color: var(--brand-green-hover);
 }
 
@@ -230,7 +231,7 @@ nav li a {
 
 /* service section */
 .service {
-  padding: 263px 20px 0 20px;
+  padding-top: 263px;
   padding-bottom: 160px;
   width: 80%;
   height: 1082px;
@@ -349,4 +350,74 @@ nav li a {
   line-height: 24px;
   color: var(--gray-paragraph);
   margin-top: 10px;
+}
+
+/* contact */
+
+.contact {
+  width: 80%;
+  height: 699px;
+  background-color: #fff;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.contact-text {
+  width: 30%;
+}
+
+.contact-image {
+  width: 50%;
+}
+
+.contact-image img {
+  width: 100%;
+}
+
+.contact-title {
+  font-size: 40px;
+  line-height: 52px;
+  font-size: 700;
+}
+
+.contact-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 30px 0;
+}
+
+.contact-location,
+.contact-mail {
+  display: flex;
+  gap: 16px;
+  line-height: 24px;
+}
+
+.contact-location {
+  margin: 10px 0;
+}
+
+.contact .contact-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 267px;
+  height: 56px;
+  border: none;
+  border-radius: 40px;
+  background-color: var(--brand-green);
+  color: var(--white);
+}
+
+.contact .contact-btn div {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 18px;
 }
